@@ -1,0 +1,235 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("/css/font-awesome/fonts/fontawesome-webfont.eot");
+  src: url("/css/font-awesome/fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("/css/font-awesome/fonts/fontawesome-webfont.woff") format("woff"), url("/css/font-awesome/fonts/fontawesome-webfont.ttf") format("truetype"), url("/css/font-awesome/fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  font-family: FontAwesome;
+  content: "\f0c4"; }
+
+.app-container {
+  font-family: FontAwesome;
+  padding: 1em;
+  height: auto;
+  width: 1334px;
+  margin: 0 auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  background-color: #F9F9F9; }
+  .app-container .app-header-container {
+    border: 1px solid #DDDDDD; }
+
+.panel {
+  border: 1px solid #DDDDDD;
+  padding: 0;
+  margin-bottom: 5px;
+  height: auto; }
+
+.app-header {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 3px; }
+  .app-header li {
+    display: inline-block;
+    width: 12%;
+    text-align: center; }
+
+.dashboard {
+  padding: 5px;
+  text-align: center; }
+  .dashboard li {
+    overflow: hidden; }
+  .dashboard li:last-of-type {
+    margin: 0; }
+  .dashboard .dashboard-widget {
+    border: 1px solid #53883E;
+    height: 250px;
+    width: 250px;
+    display: inline-block;
+    margin-right: 10px;
+    -webkit-box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    position: relative; }
+    .dashboard .dashboard-widget .piechart-container {
+      margin-top: 10px;
+      float: left;
+      margin-left: 5px; }
+    .dashboard .dashboard-widget div h1 {
+      margin-top: 0; }
+    .dashboard .dashboard-widget div .result {
+      color: #000000;
+      margin-bottom: 30px;
+      text-align: center; }
+    .dashboard .dashboard-widget p {
+      margin: 5px;
+      color: #53883E;
+      font-weight: bolder;
+      text-align: left; }
+    .dashboard .dashboard-widget .test {
+      position: absolute;
+      color: #ffffff;
+      top: 38px;
+      left: 68px;
+      font-weight: normal; }
+    .dashboard .dashboard-widget .maintainability {
+      position: absolute;
+      color: #ffffff;
+      top: 38px;
+      left: 149px;
+      font-weight: normal; }
+    .dashboard .dashboard-widget .security {
+      position: absolute;
+      color: #ffffff;
+      top: 150px;
+      left: 67px;
+      font-weight: normal; }
+    .dashboard .dashboard-widget .workmanship {
+      position: absolute;
+      color: #ffffff;
+      top: 149px;
+      left: 146px;
+      font-weight: normal; }
+    .dashboard .dashboard-widget .test-pass-container {
+      margin-top: 60px; }
+      .dashboard .dashboard-widget .test-pass-container label {
+        font-size: 40px; }
+      .dashboard .dashboard-widget .test-pass-container p {
+        margin-top: 0;
+        display: inline-block;
+        color: #000000; }
+    .dashboard .dashboard-widget .progress1 {
+      text-align: left;
+      margin: 35px 0 0 5px; }
+      .dashboard .dashboard-widget .progress1 .progress-bar-label {
+        position: absolute;
+        top: 200px;
+        left: 75px;
+        text-align: center;
+        color: #000000; }
+        .dashboard .dashboard-widget .progress1 .progress-bar-label p {
+          margin: 0;
+          color: #000000; }
+    .dashboard .dashboard-widget .progress1 progress[value] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 237px;
+      height: 40px;
+      position: relative; }
+
+.text-center {
+  text-align: center; }
+
+.green-icon {
+  color: #53883E;
+  font-size: 5em; }
+
+.golden-icon {
+  color: #DBA126;
+  font-size: 5em; }
+
+.blue-icon {
+  color: #156EC2;
+  font-size: 5em; }
+
+.blue {
+  color: #156EC2; }
+
+.icon-container {
+  display: inline-block; }
+  .icon-container h6 {
+    margin: 0;
+    font-size: 12px; }
+
+.margin-top-laptop-icons {
+  margin-top: 1.4em; }
+
+.timestamp {
+  margin-top: 50px;
+  font-size: 11px; }
+
+.panel-header {
+  height: 50px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 3px;
+  background-color: #EDEDED; }
+  .panel-header li {
+    display: inline-block;
+    width: 12.5%;
+    text-align: center; }
+    .panel-header li .bar1 {
+      width: 40px;
+      height: 30px;
+      background-color: #53883E;
+      border: 2px solid #cecece;
+      margin: 0 auto; }
+    .panel-header li .bar2 {
+      width: 40px;
+      height: 30px;
+      background-color: #53883E;
+      border: 2px solid #cecece;
+      margin: 0 auto; }
+    .panel-header li .bar3 {
+      width: 40px;
+      height: 30px;
+      background-color: #53883E;
+      border: 2px solid #cecece;
+      margin: 0 auto; }
+    .panel-header li .bar4 {
+      width: 40px;
+      height: 30px;
+      background-color: #53883E;
+      border: 2px solid #cecece;
+      margin: 0 auto; }
+    .panel-header li .time-started {
+      font-size: 12px;
+      font-weight: bolder; }
+    .panel-header li p {
+      font-size: 15px; }
+
+.bar {
+  width: 40px;
+  height: 30px; }
+  .bar div {
+    background-color: #DDDDDD;
+    width: 40px;
+    height: 30px; }
+
+.vertical-align {
+  display: flex;
+  align-items: center; }
+
+.golden-color {
+  color: #DBA126; }
+
+.button-color-blue {
+  background-color: #4679BD;
+  color: #ffffff;
+  height: 30px; }
+
+.accepted {
+  color: #53883E;
+  border: 2px solid #53883E; }
+  .accepted .changelist-build {
+    text-align: left;
+    margin-left: 5px; }
+  .accepted .panel-header {
+    border-bottom: 2px solid #53883E;
+    background-color: #D1FE51; }
+    .accepted .panel-header .icon {
+      font-size: 25px; }
+    .accepted .panel-header .timestamp {
+      font-weight: bolder; }
+  .accepted .dashboard .dashboard-widget:last-of-type {
+    border: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+
+/*# sourceMappingURL=app.css.map */

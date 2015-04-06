@@ -1,10 +1,13 @@
-module.exports = function(grunt) {
+/*jslint vars: true, plusplus: true, browser: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
+/*global define */
+/*global $, module*/
+module.exports = function (grunt) {
     "use strict";
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             src: {
-                files: ['index.html', 'javascript/app.js', 'css/app.css','css/app.scss', 'Gruntfile.js'],
+                files: ['index.html', "partials/*.html" 'javascript/app.js', 'css/app.css', 'css/app.scss', 'Gruntfile.js']
             }
         },
         browserSync: {

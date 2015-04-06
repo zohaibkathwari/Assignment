@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html>
-
+<html data-ng-app="TestAssignment">
 <head>
     <title>Assignment&copy;</title>
-    <meta charset="utf-8">
-    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css"> -->
-    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="node_modules/angular-chart.js/dist/angular-chart.css">
+     <script src "node_modules/jquery/dist/cdn/jquery.min.js"></script> 
+    <script src="node_modules/angular/angular.min.js"></script> 
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="javascript/Chart.js/Chart.js"></script>
+    <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="javascript/app/app.js"></script>
+    <script src="javascript/app/factory.js"></script>
+    <script src="javascript/app/controller.js"></script>
+    <!--[if IE]><script src="excanvas.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="excanvas.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="es5-shim.js"></script><![endif]-->
 </head>
-
 <body>
     <div class="app-container">
         <div class="app-header-container">
@@ -25,379 +32,139 @@
                 <li>Functional Test</li>
             </ul>
         </div>
-        <div>
-            <div class="panel">
-                <ul class="panel-header vertical-align">
-                    <li class="changelist-build">
-                        <div>
-                            <span class="fa fa-laptop"> Tenrox-R1_1234</span>
-                        </div>
-                    </li>
-                    <li class="owner">
-                        <div>
-                            <label>Jtuck</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="time-started">
-                            <label>10:46AM 4-14-2014</label>
-                        </div>
-                    </li>
-                    <li class="state">
-                        <div>
-                            <label>Complete</label>
-                        </div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar1"></div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar2"></div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar3"> </div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar4"></div>
-                    </li>
-                </ul>
-                <div>
-                    <!-- <div>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-                    </div> -->
-                </div>
-            </div>
-            <div class="panel">
-                <ul class="panel-header vertical-align">
-                    <li class="changelist-build">
-                        <div>
-                            <span class="fa fa-laptop"> Tenrox-R1_1234</span>
-                        </div>
-                    </li>
-                    <li class="owner">
-                        <div>
-                            <label>Jtuck</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="time-started">
-                            <label>10:46AM 4-14-2014</label>
-                        </div>
-                    </li>
-                    <li class="state">
-                        <div>
-                            <label>Complete</label>
-                        </div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar1"></div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar2"></div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar3"> </div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar4"></div>
-                    </li>
-                </ul>
-                <div>
-                    <!-- <div>
-                        Change does not roll in on the wheels of inevitability, but comes through continuous struggle. And so we must straighten our backs and work for our freedom. A man can't ride you unless your back is bent.
-                    </div> -->
-                </div>
-            </div>
-            <div class="panel">
-                <ul class="panel-header vertical-align">
-                    <li class="changelist-build">
-                        <div>
-                            <span class="fa fa-laptop"> Tenrox-R1_1234</span>
-                        </div>
-                    </li>
-                    <li class="owner">
-                        <div>
-                            <label>Jtuck</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="time-started">
-                            <label>10:46AM 4-14-2014</label>
-                        </div>
-                    </li>
-                    <li class="state">
-                        <div>
-                            <label>Complete</label>
-                        </div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar1"></div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar2"></div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar3"> </div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar4"></div>
-                    </li>
-                </ul>
-                <div>
-                    <!--  <div>
-                       You must take personal responsibility. You cannot change the circumstances, the seasons, or the wind, but you can change yourself. That is something you have charge of.
-                   </div> -->
-                </div>
-            </div>
-            <div class="panel">
-                <ul class="panel-header vertical-align">
-                    <li class="changelist-build">
-                        <div>
-                            <span class="fa fa-laptop"> Tenrox-R1_1234</span>
-                        </div>
-                    </li>
-                    <li class="owner">
-                        <div>
-                            <label>Jtuck</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="time-started">
-                            <label>10:46AM 4-14-2014</label>
-                        </div>
-                    </li>
-                    <li class="state">
-                        <div>
-                            <label>Complete</label>
-                        </div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar1"></div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar2"></div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar3"> </div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar4"></div>
-                    </li>
-                </ul>
-                <div>
-                    <!-- <div>
-                        You must take personal responsibility. You cannot change the circumstances, the seasons, or the wind, but you can change yourself. That is something you have charge of.
-                    </div> -->
-                </div>
-            </div>
-            <div class="panel">
-                <ul class="panel-header vertical-align">
-                    <li class="changelist-build">
-                        <div>
-                            <span class="fa fa-laptop"> Tenrox-R1_1234</span>
-                        </div>
-                    </li>
-                    <li class="owner">
-                        <div>
-                            <label>Jtuck</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="time-started">
-                            <label>10:46AM 4-14-2014</label>
-                        </div>
-                    </li>
-                    <li class="state">
-                        <div>
-                            <label>Complete</label>
-                        </div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar1"></div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar2"></div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar3"> </div>
-                    </li>
-                    <li class="bar-wrapper">
-                        <div class="bar4"></div>
-                    </li>
-                </ul>
-                <div>
-                    <!-- <div>
-                        You must take personal responsibility. You cannot change the circumstances, the seasons, or the wind, but you can change yourself. That is something you have charge of.
-                    </div> -->
-                </div>
-            </div>
-            <div class="panel accepted">
-                <ul class="panel-header vertical-align">
-                    <li class="changelist-build">
-                        <div>
-                            <span class="fa fa-building-o icon"></span><a href="">432459</a>
-                        </div>
-                    </li>
-                    <li class="owner">
-                        <div>
-                            <label>Samy</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="time-started">
-                            <label>4/16/2014&nbsp;&nbsp;7:51AM</label>
-                        </div>
-                    </li>
-                    <li class="state">
-                        <div>
-                            <label>Accepted</label>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="dashboard">
-                    <li class="dashboard-widget">
-                        <p>Metrics</p>
-                        <div class="text-center">
+        <div data-ng-controller="AppController">
+            <div data-ng-repeat="test in tests">
+                <div class="panel" ng-class="test.state">
+                    <ul class="panel-header vertical-align">
+                        <li class="changelist-build">
                             <div>
-                                <div class="icon-container">
-                                    <span class="fa fa-arrow-up green-icon"></span>
-                                    <p class="test">64</p>
-                                    <h6>Test</h6>
-                                </div>
-                                <div class="icon-container">
-                                    <span class="fa fa-arrow-up green-icon"></span>
-                                    <p class="maintainability">53</p>
-                                    <h6>Maintainability</h6>
-                                </div>
+                                <span class="fa font-size" ng-class="test.class"></span>&nbsp;<a href="" ng-click=" setSelectedIndex($index); showDetails = ! showDetails;">{{test.name}}</a>
                             </div>
+                        </li>
+                        <li class="owner">
                             <div>
+                                <label>{{test.owner}}</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="time-started">
+                                <label>{{test.timeStarted}}</label>
+                            </div>
+                        </li>
+                        <li class="state">
+                            <div>
+                                <label>{{test.state}}</label>
+                            </div>
+                        </li>
+                        <li class="bar-wrapper" ng-show="! showDetails">
+                            <div class="bar1">
+                                <div class="progress-line"></div>
+                            </div>
+                        </li>
+                        <li class="bar-wrapper" ng-show="! showDetails">
+                            <div class="bar2"></div>
+                        </li>
+                        <li class="bar-wrapper" ng-show="! showDetails">
+                            <div class="bar3"></div>
+                        </li>
+                        <li class="bar-wrapper" ng-show="! showDetails">
+                            <div class="bar4"></div>
+                        </li>
+                    </ul>
+                    <ul class="dashboard" ng-show="(($index == selectedIndex) && (test.state == 'accepted' || test.state == 'rejected' || test.state == 'complete')) && showDetails;">
+                        <li class="dashboard-widget metrics-container">
+                            <p>Metrics</p>
+                            <div class="text-center">
+                                <div>
+                                    <div class="icon-container">
+                                        <span class="fa fa-arrow-up green-icon"></span>
+                                        <p class="test">{{test.matrics.tests}}</p>
+                                        <h6>Test</h6>
+                                    </div>
+                                    <div class="icon-container">
+                                        <span class="fa" ng-class="{'fa-arrow-down maroon-icon': test.state === 'rejected', 'fa-arrow-up green-icon': test.state === 'complete' || test.state === 'accepted'}"></span>
+                                        <p class="maintainability">{{test.matrics.maintainability}}</p>
+                                        <h6>Maintainability</h6>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="icon-container">
+                                        <span class="fa fa-arrow-right golden-icon"></span>
+                                        <p class="security">{{test.matrics.security}}</p>
+                                        <h6>Security</h6>
+                                    </div>
+                                    <div class="icon-container">
+                                        <span class="fa fa-arrow-right golden-icon"></span>
+                                        <p class="workmanship">{{test.matrics.workmanship}}</p>
+                                        <h6>Workmanship</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dashboard-widget build-container">
+                            <p>Build</p>
+                            <div class="text-center margin-top-laptop-icons">
                                 <div class="icon-container">
-                                    <span class="fa fa-arrow-right golden-icon"></span>
-                                    <p class="security">64</p>
-                                    <h6>Security</h6>
+                                    <span class="fa fa-laptop blue-icon"></span>
+                                    <h6 class="blue">Debug</h6>
                                 </div>
                                 <div class="icon-container">
-                                    <span class="fa fa-arrow-right golden-icon"></span>
-                                    <p class="workmanship">72</p>
-                                    <h6>Workmanship</h6>
+                                    <span class="fa fa-laptop blue-icon"></span>
+                                    <h6 class="blue">Release</h6>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="dashboard-widget">
-                        <p>Build</p>
-                        <div class="text-center margin-top-laptop-icons">
-                            <div class="icon-container">
-                                <span class="fa fa-laptop blue-icon"></span>
-                                <h6 class="blue">Debug</h6>
+                            <footer class="timestamp text-center">{{test.buildTime}}</footer>
+                        </li>
+                        <li class="dashboard-widget unit-test-container">
+                            <p>Unit Test</p>
+                            <div class="piechart-container">
+                                <canvas id="pie" width="150" height="150" class="chart chart-pie" data="unitData"
+  labels="unitLabels"></canvas>
                             </div>
-                            <div class="icon-container">
-                                <span class="fa fa-laptop blue-icon"></span>
-                                <h6 class="blue">Release</h6>
+                            <div class="test-pass-container">
+                                <label>{{test.unitTest.passPercentage}}%</label>
+                                <p>tests passed</p>
                             </div>
-                        </div>
-                        <footer class="timestamp text-center">10:46AM 4-14-2014</footer>
-                    </li>
-                    <li class="dashboard-widget">
-                        <p>Unit Test</p>
-                        <div class="piechart-container">
-                            <canvas id="canvas" width="150" height="150"></canvas>
-                        </div>
-                        <div class="test-pass-container">
-                            <label>73%</label>
-                            <p>tests passed</p>
-                        </div>
-                        <div class="progress1">
-                            <progress min="0" max="100" value="80"></progress>
-                            <div class="progress-bar-label">
-                                <span>76%</span>
-                            <p>code covered</p>
+                            <div class="progress">
+                                <div class="progress-bar">
+                                    <div class="inner-progress-bar" style="width: {{test.unitTest.codeCovered}}%"></div>
+                                    <div class="progress-bar-label text-center">
+                                        <span>{{test.unitTest.codeCovered}}%</span>
+                                        <p>code covered</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="dashboard-widget">
-                        <p>Functional Test</p>
-                        <!-- <div class="piechart-container">
-                            <canvas id="piechart" width="100" height="100"></canvas>
-                        </div> -->
-                    </li>
-                    <li class="dashboard-widget">
-                        <div class="text-center">
-                            <p class="result">Result:</p>
-                            <label class="golden-color">Change Accepted</label>
-                            <h1 class="golden-color">Auto-Merged</h1>
-                            <input type="button" class="fa button-color-blue" value="&#xf002; Merged-Build">
-                        </div>
-                    </li>
-                </ul>
-            </div>
+                        </li>
+                        <li class="dashboard-widget functional-test-container">
+                            <p>Functional Test</p>
+                            <div class="piechart-container">
+                                <!--<pie-chart data="data" options="options"></pie-chart>-->
+                               <canvas id="pie" width="150" height="150" class="chart chart-pie" data="functionaData"
+  labels="functionalLabels"></canvas> 
+                            </div>
+                            <div class="test-pass-container">
+                                <label>{{test.functionalTest.passPercentage}}%</label>
+                                <p>tests passed</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar">
+                                    <div class="inner-progress-bar" style="width: {{test.functionalTest.codeCovered}}%"></div>
+                                    <div class="progress-bar-label text-center">
+                                        <span>{{test.functionalTest.codeCovered}}%</span>
+                                        <p>code covered</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dashboard-widget result-wrapper">
+                            <span ng-if="test.state === 'accepted'" ng-include src="'partials/accepted.html'"></span>
+                            <span ng-if="test.state === 'rejected'" ng-include src="'partials/rejected.html'"></span>
+                            <span ng-if="test.state === 'complete'" ng-include src="'partials/complete.html'"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>   
         </div>
-    </div>
-    <script>
-    /*Pi Chart*/
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    var cw = canvas.width;
-    var ch = canvas.height;
-    ctx.lineWidth = 2;
-    ctx.font = '12px verdana';
-    var PI2 = Math.PI * 2;
-    var myColor = ["#53883E", "#DBA126"];
-    var myData = [40, 60];
-    var cx = Math.floor(canvas.width / 2);
-    var cy = Math.floor(canvas.height / 2);
-    var radius = Math.floor(canvas.width / 2) - 1;
-    pieChart(myData, myColor);
-
-    function pieChart(data, colors) {
-
-        var total = 0;
-        for (var i = 0; i < data.length; i++) {
-            total += data[i];
-        }
-
-        var sweeps = []
-        for (var i = 0; i < data.length; i++) {
-            sweeps.push(data[i] / total * PI2);
-        }
-
-        var accumAngle = 0;
-        for (var i = 0; i < sweeps.length; i++) {
-            drawWedge(accumAngle, accumAngle + sweeps[i], colors[i], data[i]);
-            accumAngle += sweeps[i];
-        }
-
-
-    }
-
-    function drawWedge(startAngle, endAngle, fill, label) {
-
-            // draw the wedge
-            ctx.beginPath();
-            ctx.moveTo(cx, cy);
-            ctx.arc(cx, cy, radius, startAngle, endAngle, false);
-            ctx.closePath();
-            ctx.fillStyle = fill;
-            ctx.strokeStyle = 'black';
-            ctx.fill();
-            ctx.stroke();
-
-            // draw the label
-            var midAngle = startAngle + (endAngle - startAngle) / 2;
-            var labelRadius = radius * .75;
-            var x = cx + (labelRadius) * Math.cos(midAngle);
-            var y = cy + (labelRadius) * Math.sin(midAngle);
-            ctx.fillStyle = 'white';
-            ctx.fillText(label, x, y);
-
-        }
-        /*Pi Chart ends*/
-    </script>
-    <script src "node_modules/jquery/dist/cdn/jquery.min.js"></script>
-    <!--<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
-    <script src="node_modules/angular/angular.min.js"></script>
-    <script src="node_modules/angular-route/angular-route.min.js"></script>
-    <script src="javascript/app/app.js"></script>
+    </div>   
 </body>
-
 </html>

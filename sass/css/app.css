@@ -34,7 +34,6 @@ body {
     -moz-box-shadow: none;
     box-shadow: none; }
   .dashboard .dashboard-widget {
-    /*border: 1px solid $green;*/
     height: 250px;
     width: 250px;
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
@@ -49,7 +48,10 @@ body {
     border-radius: 3px;
     display: inline-block;
     margin-right: 10px;
-    position: relative; }
+    position: relative;
+    /* IE11 */
+    /* IE10 */
+    /* IE9 */ }
     .dashboard .dashboard-widget .piechart-container {
       float: left; }
       .dashboard .dashboard-widget .piechart-container canvas {
@@ -98,7 +100,7 @@ body {
       font-size: 20px; }
     .dashboard .dashboard-widget .progress {
       position: relative;
-      top: 27px; }
+      margin-top: 42px; }
       .dashboard .dashboard-widget .progress .progress-bar-label {
         position: absolute;
         top: 8px;
@@ -112,6 +114,14 @@ body {
           font-weight: normal; }
         .dashboard .dashboard-widget .progress .progress-bar-label span {
           font-weight: bolder; }
+    .dashboard .dashboard-widget *::-ms-backdrop,
+    .dashboard .dashboard-widget .progress {
+      margin-top: 53px; }
+    @media all and (-ms-high-contrast: none) {
+      .dashboard .dashboard-widget .progress {
+        margin-top: 53px\0; } }
+    .dashboard .dashboard-widget .progress {
+      margin-top: 53px\0; }
     .dashboard .dashboard-widget .progress progress[value] {
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -164,7 +174,7 @@ body {
   padding-top: 3px; }
   .panel-header li {
     display: inline-block;
-    width: 12.5%;
+    width: 12%;
     text-align: center; }
     .panel-header li .bar1 {
       width: 40px;
@@ -187,7 +197,7 @@ body {
     .panel-header li .bar4 {
       width: 40px;
       height: 30px;
-      background-color: #DDDDDD;
+      /*background-color: $grey;*/
       border: 2px solid #cecece;
       margin: 0 auto; }
     .panel-header li .time-started {
@@ -274,8 +284,8 @@ body {
 .running {
   border: 3px solid #4679BD; }
   .running > ul {
-    color: #4679BD;
-    background-color: rgba(221, 221, 221, 0.5); }
+    color: #004198;
+    background-color: rgba(70, 121, 189, 0.5); }
     .running > ul li .bar1 {
       background-color: #DDDDDD; }
     .running > ul li .bar2 {

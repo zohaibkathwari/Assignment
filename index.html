@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="sass/css/app.css">
     <link rel="stylesheet" href="node_modules/angular-chart.js/dist/angular-chart.css">
      <script src "node_modules/jquery/dist/cdn/jquery.min.js"></script> 
-    <script src="node_modules/angular/angular.min.js"></script> 
-    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-mocks/angular-mocks.js"></script>
     <script src="javascript/Chart.js/Chart.js"></script>
     <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
     <script src="javascript/app/app.js"></script>
+    <script src="javascript/app/httpStubBackend.js"></script>
     <script src="javascript/app/factory.js"></script>
     <script src="javascript/app/controller.js"></script>
     <!--[if IE]><script src="excanvas.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="excanvas.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="es5-shim.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="es5-shim.js"></script><![endif]-->
 </head>
 <body>
     <div class="app-container">
@@ -38,7 +39,7 @@
                     <ul class="panel-header vertical-align">
                         <li class="changelist-build">
                             <div>
-                                <span class="fa font-size" ng-class="test.class"></span>&nbsp;<a href="" ng-click=" setSelectedIndex($index); showDetails = ! showDetails;">{{test.name}}</a>
+                                <span class="fa font-size" ng-class="test.class" ></span>&nbsp;<a href="" ng-click=" setSelectedIndex($index); showBar = ! showBar;">{{test.name}}</a>
                             </div>
                         </li>
                         <li class="owner">
@@ -56,22 +57,22 @@
                                 <label>{{test.state}}</label>
                             </div>
                         </li>
-                        <li class="bar-wrapper" ng-show="! showDetails">
+                        <li class="bar-wrapper" ng-show="!showBar || ($index != selectedIndex)">
                             <div class="bar1">
                                 <div class="progress-line"></div>
                             </div>
                         </li>
-                        <li class="bar-wrapper" ng-show="! showDetails">
+                        <li class="bar-wrapper" ng-show="!showBar || ($index != selectedIndex)">
                             <div class="bar2"></div>
                         </li>
-                        <li class="bar-wrapper" ng-show="! showDetails">
+                        <li class="bar-wrapper" ng-show="!showBar || ($index != selectedIndex)">
                             <div class="bar3"></div>
                         </li>
-                        <li class="bar-wrapper" ng-show="! showDetails">
+                        <li class="bar-wrapper" ng-show="!showBar || ($index != selectedIndex)">
                             <div class="bar4"></div>
                         </li>
                     </ul>
-                    <ul class="dashboard" ng-show="(($index == selectedIndex) && (test.state == 'accepted' || test.state == 'rejected' || test.state == 'complete')) && showDetails;">
+                    <ul class="dashboard" ng-show="(($index == selectedIndex) && (test.state == 'accepted' || test.state == 'rejected' || test.state == 'complete')) && showBar;">
                         <li class="dashboard-widget metrics-container">
                             <p>Metrics</p>
                             <div class="text-center">
@@ -119,7 +120,7 @@
                             <p>Unit Test</p>
                             <div class="piechart-container">
                                 <canvas id="pie" width="150" height="150" class="chart chart-pie" data="unitData"
-  labels="unitLabels"></canvas>
+  labels="unitLabels" ng-show="$index == selectedIndex"></canvas>
                             </div>
                             <div class="test-pass-container">
                                 <label>{{test.unitTest.passPercentage}}%</label>
@@ -138,9 +139,7 @@
                         <li class="dashboard-widget functional-test-container">
                             <p>Functional Test</p>
                             <div class="piechart-container">
-                                <!--<pie-chart data="data" options="options"></pie-chart>-->
-                               <canvas id="pie" width="150" height="150" class="chart chart-pie" data="functionaData"
-  labels="functionalLabels"></canvas> 
+<canvas id="pie" width="150" height="150" class="chart chart-pie" data="functionaData" labels="functionalLabels" ng-show="$index == selectedIndex"></canvas> 
                             </div>
                             <div class="test-pass-container">
                                 <label>{{test.functionalTest.passPercentage}}%</label>
@@ -148,7 +147,7 @@
                             </div>
                             <div class="progress">
                                 <div class="progress-bar">
-                                    <div class="inner-progress-bar" style="width: {{test.functionalTest.codeCovered}}%"></div>
+                                <div class="inner-progress-bar" style="width: {{test.functionalTest.codeCovered}}%"></div>
                                     <div class="progress-bar-label text-center">
                                         <span>{{test.functionalTest.codeCovered}}%</span>
                                         <p>code covered</p>

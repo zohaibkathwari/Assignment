@@ -38,7 +38,7 @@
                     <ul class="panel-header vertical-align">
                         <li class="changelist-build">
                             <div>
-                                <span class="fa font-size" ng-class="test.class" ></span>&nbsp;<a href="" ng-click=" setSelectedIndex($index); showBar = ! showBar;">{{test.name}}</a>
+<span class="fa font-size" ng-class="{'fa-laptop':test.type == 'build', 'fa-building-o':test.type == 'firewall'}" ></span>&nbsp;<a href="" ng-click=" setSelectedIndex($index); showBar = ! showBar;">{{test.name}}</a>
                             </div>
                         </li>
                         <li class="owner">

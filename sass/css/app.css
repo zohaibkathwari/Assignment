@@ -73,31 +73,31 @@ body {
     .dashboard .dashboard-widget .test {
       position: absolute;
       color: #ffffff;
-      top: 25px;
-      left: 67px;
+      top: 47px;
+      left: 68px;
       font-weight: normal;
-      font-size: 20px; }
+      font-size: 19px; }
     .dashboard .dashboard-widget .maintainability {
       position: absolute;
       color: #ffffff;
-      top: 25px;
+      top: 47px;
       left: 160px;
       font-weight: normal;
-      font-size: 20px; }
+      font-size: 19px; }
     .dashboard .dashboard-widget .security {
       position: absolute;
       color: #ffffff;
-      top: 157px;
-      left: 67px;
+      top: 159px;
+      left: 68px;
       font-weight: normal;
-      font-size: 20px; }
+      font-size: 19px; }
     .dashboard .dashboard-widget .workmanship {
       position: absolute;
       color: #ffffff;
-      top: 157px;
+      top: 159px;
       left: 160px;
       font-weight: normal;
-      font-size: 20px; }
+      font-size: 19px; }
     .dashboard .dashboard-widget .progress {
       position: relative;
       margin-top: 42px; }

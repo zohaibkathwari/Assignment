@@ -2,21 +2,18 @@
     "tests": [{
         "state": "pending",
         "type": "build",
-        "class": "fa-laptop",
         "name": "Tenrox-R1_1235",
         "owner": "",
         "timeStarted": ""
     }, {
         "state": "running",
         "type": "firewall",
-        "class": "fa-building-o",
         "name": "432642",
         "owner": "jtuck",
         "timeStarted": "04/18/2014 12:12PM"
     }, {
         "state": "rejected",
         "type": "firewall",
-        "class": "fa-building-o",
         "name": "432461",
         "owner": "samy",
         "timeStarted": "04/18/2014 12:12PM",
@@ -46,7 +43,6 @@
     }, {
         "state": "complete",
         "type": "build",
-        "class": "fa-laptop",
         "name": "Tenrox-R1_1234",
         "owner": "",
         "timeStarted": "04/18/2014 10:53AM",
@@ -76,7 +72,6 @@
     }, {
         "state": "rejected",
         "type": "firewall",
-        "class": "fa-building-o",
         "name": "432460",
         "owner": "samy",
         "timeStarted": "04/18/2014 12:12PM",
@@ -107,7 +102,6 @@
     }, {
         "state": "accepted",
         "type": "firewall",
-        "class": "fa-building-o",
         "name": "432459",
         "owner": "samy",
         "timeStarted": "04/18/2014 12:12PM",

@@ -7,14 +7,16 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             src: {
-                files: ['index.html', 'javascript/app.js', 'sass/css/app.css', 'Gruntfile.js']
+                files: ['index.html', 'javascript/app/controller.js', 'sass/css/app.css', 'Gruntfile.js']
             }
         },
         browserSync: {
             dev: {
                 bsFiles: {
                     src: [
-                        'index.html'
+                        'index.html',
+                        'javascript/app/controller.js',
+                        'sass/css/app.css'
                     ]
                 },
                 options: {

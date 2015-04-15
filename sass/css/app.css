@@ -168,13 +168,12 @@ body {
 
 .panel-header {
   height: 50px;
-  /*list-style-type: none;*/
   padding: 0;
   margin: 0;
   padding-top: 3px; }
   .panel-header li {
     display: inline-block;
-    width: 12%;
+    width: 12.2%;
     text-align: center; }
     .panel-header li .bar1 {
       width: 40px;
@@ -197,7 +196,6 @@ body {
     .panel-header li .bar4 {
       width: 40px;
       height: 30px;
-      /*background-color: $grey;*/
       border: 2px solid #cecece;
       margin: 0 auto; }
     .panel-header li .time-started {

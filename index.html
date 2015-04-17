@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html data-ng-app="TestAssignment">
+
 <head>
     <title>Assignment&copy;</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="sass/css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="sass/css/app.css">
     <link rel="stylesheet" href="node_modules/angular-chart.js/dist/angular-chart.css">
-    <script src "node_modules/jquery/dist/cdn/jquery.min.js"></script> 
+    <script src "node_modules/jquery/dist/cdn/jquery.min.js"></script>
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/angular-mocks/angular-mocks.js"></script>
     <script src="javascript/Chart.js/Chart.js"></script>
@@ -17,9 +18,16 @@
     <!--[if IE]><script src="excanvas.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="excanvas.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="es5-shim.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+        </script>
+    <![endif]-->
 </head>
+
 <body>
-    <div class="app-container">
+    <!--App Container Section-->
+    <section class="app-container">
+        <!--App Header Bar-->
         <div class="app-header-container">
             <ul class="app-header">
                 <li>Changelist/Built</li>
@@ -34,11 +42,13 @@
         </div>
         <div data-ng-controller="AppController">
             <div data-ng-repeat="test in tests">
+                <!--App Class Panel-->
                 <div class="panel" ng-class="test.state">
+                    <!--Panel Header-->
                     <ul class="panel-header vertical-align">
                         <li class="changelist-build">
                             <div>
-<span class="fa font-size" ng-class="{'fa-laptop':test.type == 'build', 'fa-building-o':test.type == 'firewall'}" ></span>&nbsp;<a href="" ng-click=" setSelectedIndex($index); showBar = ! showBar;">{{test.name}}</a>
+                                <span class="fa font-size" ng-class="{'fa-laptop':test.type == 'build', 'fa-building-o':test.type == 'firewall'}"></span>&nbsp;<a href="" ng-click=" setSelectedIndex($index); showBar = ! showBar;">{{test.name}}</a>
                             </div>
                         </li>
                         <li class="owner">
@@ -71,6 +81,8 @@
                             <div class="bar4"></div>
                         </li>
                     </ul>
+                    <!--Panel Header Ends-->
+                    <!--App Dashboard-->
                     <ul class="dashboard" ng-show="(($index == selectedIndex) && (test.state == 'accepted' || test.state == 'rejected' || test.state == 'complete')) && showBar;">
                         <li class="dashboard-widget metrics-container">
                             <p>Metrics</p>
@@ -118,8 +130,7 @@
                         <li class="dashboard-widget unit-test-container">
                             <p>Unit Test</p>
                             <div class="piechart-container">
-                                <canvas id="pie" width="150" height="150" class="chart chart-pie" data="unitData"
-  labels="unitLabels" ng-show="$index == selectedIndex"></canvas>
+                                <canvas id="pie" width="150" height="150" class="chart chart-pie" data="unitData" labels="unitLabels" ng-show="$index == selectedIndex"></canvas>
                             </div>
                             <div class="test-pass-container">
                                 <label>{{test.unitTest.passPercentage}}%</label>
@@ -138,7 +149,7 @@
                         <li class="dashboard-widget functional-test-container">
                             <p>Functional Test</p>
                             <div class="piechart-container">
-<canvas id="pie" width="150" height="150" class="chart chart-pie" data="functionaData" labels="functionalLabels" ng-show="$index == selectedIndex"></canvas> 
+                                <canvas id="pie" width="150" height="150" class="chart chart-pie" data="functionaData" labels="functionalLabels" ng-show="$index == selectedIndex"></canvas>
                             </div>
                             <div class="test-pass-container">
                                 <label>{{test.functionalTest.passPercentage}}%</label>
@@ -146,7 +157,7 @@
                             </div>
                             <div class="progress">
                                 <div class="progress-bar">
-                                <div class="inner-progress-bar" style="width: {{test.functionalTest.codeCovered}}%"></div>
+                                    <div class="inner-progress-bar" style="width: {{test.functionalTest.codeCovered}}%"></div>
                                     <div class="progress-bar-label text-center">
                                         <span>{{test.functionalTest.codeCovered}}%</span>
                                         <p>code covered</p>
@@ -155,14 +166,46 @@
                             </div>
                         </li>
                         <li class="dashboard-widget result-wrapper">
-                            <span ng-if="test.state === 'accepted'" ng-include src="'partials/accepted.html'"></span>
-                            <span ng-if="test.state === 'rejected'" ng-include src="'partials/rejected.html'"></span>
-                            <span ng-if="test.state === 'complete'" ng-include src="'partials/complete.html'"></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>   
+                            <span ng-show="test.state === 'accepted'">
+                                <div class="text-center">
+    <p class="result">Result:</p>
+    <label>{{test.result.result}}</label>
+    <h1>{{test.result.action}}</h1>
+    <input type="button" class="fa button-color-blue" value="&#xf002; Merged-Build">
+</div>
+                            </span>
+                            <span ng-show="test.state === 'rejected'">
+                                <div class="text-center">
+    <p class="result">Result:</p>
+    <label class="maroon">Change Rejected</label>
+    <h1 class="maroon">Metrics Reduction</h1>
+    <input type="button" class="button-color-blue" value="Find Issues">
+</div>
+                            </span>
+                            <span ng-show="test.state === 'complete'">
+                            <div class="text-center">
+    <p class="result">Result:</p>
+    <label class="golden-color"></label>
+    <h1 class="green-color">Complete</h1>
+    <input type="button" class="button-color-blue" value="Deploy"><span class="to">to:</span>
+                            <div class="select-wrapper">
+                                <select class="select-complete">
+                                    <optgroup>
+                                        <option value="Production">Production</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                    </div>
+                </span>
+                </li>
+                </ul>
+                <!--App Dashboard Ends-->
+            </div>
+            <!--App Class Panel Ends-->
         </div>
-    </div>   
+        </div>
+    </section>
+    <!--App Container Sction Ends-->
 </body>
+
 </html>

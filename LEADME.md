@@ -14,6 +14,6 @@ Note: This App is crossbrowser oriented and works above IE8 as angular js isn't 
 3. Place extracted .zip file into the default drive(e.g. C:
 ) & Navigate to the 'Assignment-master' Folder using node.js command prompt as an administrator.
 
-4. Type the command "npm install" without inverted commas and weight till all the dependencies are installed.
+4. Type the command "npm install" without inverted commas and wait till all the dependencies are installed.
 
-5. Type the command "grunt" without inverted commas and weight till the application gets hosted on the localhost:3000 into the default browser in a sync mode.
+5. Type the command "grunt" without inverted commas and wait till the application gets hosted on the localhost:3000 into the default browser in a sync mode.
